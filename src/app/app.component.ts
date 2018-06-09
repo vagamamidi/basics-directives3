@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  displaySecret = false;
+  logs = [];
+
+  onButtonClick() {
+    this.displaySecret = !this.displaySecret;
+    this.logs.push(this.logs.length + 1);
+  }
 }

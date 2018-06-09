@@ -1,4 +1,6 @@
 <div class="container">
+  <h2>Directives Assignment 3</h2>
+  <hr>
   <div class="row">
     <div class="col-xs-12">
       <ol>
@@ -10,4 +12,22 @@
       </ol>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onButtonClick()"
+      >Toggle Display</button>
+      <p
+        *ngIf="displaySecret"
+      >---SECRET---</p>
+      <div
+        *ngFor="let log of logs"
+        [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': log >= 5}"
+      >{{ log }}</div>
+    </div>
+  </div>
 </div>
+
